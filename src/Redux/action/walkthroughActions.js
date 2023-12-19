@@ -1,13 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { commonApi } from '../../api/CommonApi';
 import { ApiConstants, StoreConstantValues } from "../../constants/Constants";
-import {
-  WALKTHROUGH
-} from '../../api/EndPoints';
-import axios from 'axios';
+import {WALKTHROUGH} from '../../api/EndPoints';
 
 
-export const WalkthroughData = createAsyncThunk(
+export const walkthroughData = createAsyncThunk(
   "walkthrough/walkthrough_screen_details",
   async () => {
     const response = await commonApi({

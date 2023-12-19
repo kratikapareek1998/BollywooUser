@@ -9,6 +9,8 @@ import OTPVerification from '../screens/Authentication/OTPVerification';
 import Profile from '../screens/Authentication/Profile';
 import { BottomTab } from './tabNavigation';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import Walkthrough from '../screens/Walkthrough/index.js';
+import InterestSelection from '../screens/InterestSelection/index.js';
 
 const Stack = createNativeStackNavigator();
 const DrawerStack = createDrawerNavigator();
@@ -39,14 +41,16 @@ const MainStack = () => {
                 headerShown: false,
             }}
             >
+                {/* <Stack.Screen name = "InterestSelection" component={InterestSelection} />
+                <Stack.Screen name = "Walkthrough" component={Walkthrough} /> */}
                 <Stack.Screen name = "Splash" component={Splash} />
                 <Stack.Screen name = "Login" component={Login} />
                 <Stack.Screen name = "Signup" component={Signup} />
                 <Stack.Screen name = "ForgotPassword" component={ForgotPassword} />
                 <Stack.Screen name = "OTPVerification" component={OTPVerification} />
                 <Stack.Screen name = "Profile" component={Profile} />
-                {/* <Stack.Screen name="BottomTab" component={BottomTab} /> */}
-                <Stack.Screen name="AppDrawerStack" component={AppDrawerStack} />
+                <Stack.Screen name= "BottomTab" component={BottomTab} />
+                <Stack.Screen name= "AppDrawerStack" component={AppDrawerStack} />
 
             </Stack.Navigator>
         </NavigationContainer>

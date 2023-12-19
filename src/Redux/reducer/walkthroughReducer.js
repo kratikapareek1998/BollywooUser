@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-import { WalkthroughData } from '../action/walkthroughActions';
+import { walkthroughData } from '../action/walkthroughActions';
 
 const walkthroughSlice = createSlice({
   name: "walkthrough",
   initialState: {
-    walkthroughData: [],
+    walkthrough: [],
   },
 
   reducers: {
@@ -14,14 +14,14 @@ const walkthroughSlice = createSlice({
 
   extraReducers: builder => {
 
-    builder.addCase(WalkthroughData.pending, state => {
+    builder.addCase(walkthroughData.pending, state => {
       state.loading = true
     })
-    builder.addCase(WalkthroughData.fulfilled, (state, action) => {
-      state.loginData = action.payload
+    builder.addCase(walkthroughData.fulfilled, (state, action) => {
+      state.walkthrough = action.payload
       state.loading = false
     })
-    builder.addCase(WalkthroughData.rejected, state => {
+    builder.addCase(walkthroughData.rejected, state => {
       state.loading = false
     })
 
