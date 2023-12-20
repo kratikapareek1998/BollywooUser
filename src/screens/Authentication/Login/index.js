@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   View,
   StyleSheet,
@@ -14,6 +14,8 @@ import { moderateScale } from "../../../utils/Scalling";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Login = ({ navigation }) => {
+  const [number, setNumber] = useState('');
+
   return (
 
     <View style={styles.mainContainer}>
@@ -26,30 +28,34 @@ const Login = ({ navigation }) => {
             <View style={[styles.inputView, { marginTop: 44 }]}>
               <TextInput
                 style={styles.input}
-                placeholder="Enter Email"
+                onChangeText={setNumber}
+                value={number}
+                keyboardType="numeric"
+                maxLength={10} 
+                placeholder="Enter Phone Number"
               />
             </View>
 
-            <View style={[styles.inputView, { marginTop: 24 }]}>
+            {/* <View style={[styles.inputView, { marginTop: 24 }]}>
               <TextInput
                 style={styles.input}
                 placeholder="Enter Password"
               />
-            </View>
+            </View> */}
 
-            <View style={{ marginRight: 15, marginTop: 8 }}>
+            {/* <View style={{ marginRight: 15, marginTop: 8 }}>
               <TouchableOpacity
               onPress={() => { navigation.navigate('ForgotPassword') }} 
               style={{ alignItems: 'flex-end' }}
               >
                 <Text style={styles.forgotPasswordTextStyle}>{R.strings.forgotPassword}</Text>
               </TouchableOpacity>
-            </View>
+            </View> */}
 
             <View>
               <TouchableOpacity 
               style={styles.signInButtonStyle}
-              onPress={() => { navigation.navigate("OTPVerification") }}
+              onPress={() => {number.length==10?navigation.navigate("OTPVerification"):null}}
               >
                 <Text style={styles.signInButtonTextStyle}>{R.strings.signIn}</Text>
               </TouchableOpacity>
@@ -57,14 +63,14 @@ const Login = ({ navigation }) => {
 
           </View>
         </SafeAreaView>
-        <View style={styles.signupButtonViewStyle}>
+        {/* <View style={styles.signupButtonViewStyle}>
           <Text style={styles.dontHaveAccountTextStyle}>{R.strings.dontHaveAccount}</Text>
           <TouchableOpacity
             onPress={() => { navigation.navigate('Signup') }}
           >
             <Text style={styles.signupTextStyle}>{R.strings.signUp}</Text>
           </TouchableOpacity>
-        </View>
+        </View> */}
       </ImageBackground>
     </View>
   );
@@ -110,6 +116,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     color: R.colors.white,
     backgroundColor: 'rgba(236, 236, 236, 0.36)',
+    
+    
   },
   signInButtonStyle: {
     height: 48,

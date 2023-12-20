@@ -34,23 +34,23 @@ function DrawerView() {
 }
 
 const MainStack = () => {
-    return(
+    return (
         <NavigationContainer>
             <Stack.Navigator
-            screenOptions={{
-                headerShown: false,
-            }}
+                screenOptions={{
+                    headerShown: false,
+                }}
             >
                 {/* <Stack.Screen name = "InterestSelection" component={InterestSelection} />
-                <Stack.Screen name = "Walkthrough" component={Walkthrough} /> */}
-                <Stack.Screen name = "Splash" component={Splash} />
-                <Stack.Screen name = "Login" component={Login} />
-                <Stack.Screen name = "Signup" component={Signup} />
-                <Stack.Screen name = "ForgotPassword" component={ForgotPassword} />
-                <Stack.Screen name = "OTPVerification" component={OTPVerification} />
-                <Stack.Screen name = "Profile" component={Profile} />
-                <Stack.Screen name= "BottomTab" component={BottomTab} />
-                <Stack.Screen name= "AppDrawerStack" component={AppDrawerStack} />
+                <Stack.Screen name="Walkthrough" component={Walkthrough} /> */}
+                <Stack.Screen name="Splash" component={Splash} />
+                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Signup" component={Signup} />
+                <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+                <Stack.Screen name="OTPVerification" component={OTPVerification} />
+                <Stack.Screen name="Profile" component={Profile} />
+                <Stack.Screen name="BottomTab" component={BottomTab} />
+                <Stack.Screen name="AppDrawerStack" component={AppDrawerStack} />
 
             </Stack.Navigator>
         </NavigationContainer>

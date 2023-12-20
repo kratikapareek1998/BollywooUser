@@ -20,7 +20,7 @@ export default Header;
 const styles = StyleSheet.create({
     headerContainer: {
         backgroundColor: R.colors.white,
-        height: 100,
+        height: 50,
         flexDirection: "row",
         alignItems: "center",
         shadowColor: '#000',

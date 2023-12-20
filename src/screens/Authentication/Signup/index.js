@@ -36,7 +36,7 @@ const Signup = ({ navigation }) => {
                         <View style={[styles.inputView]}>
                             <TextInput
                                 style={styles.input}
-                                placeholder="Enter Email"
+                                placeholder="Enter Name"
                             />
                         </View>
                     </View>
@@ -52,16 +52,16 @@ const Signup = ({ navigation }) => {
                     </View>
 
                     <View style={{ marginTop: 25 }}>
-                        <Text style={styles.inputViewLabelTextStyle}>{R.strings.mobileNumber}</Text>
+                        <Text style={styles.inputViewLabelTextStyle}>{R.strings.otp}</Text>
                         <View style={[styles.inputView]}>
                             <TextInput
                                 style={styles.input}
-                                placeholder="Enter Mobile Number"
+                                placeholder="Enter OTP"
                             />
                         </View>
                     </View>
 
-                    <View style={{ marginTop: 25 }}>
+                    {/* <View style={{ marginTop: 25 }}>
                         <Text style={styles.inputViewLabelTextStyle}>{R.strings.password}</Text>
                         <View style={[styles.inputView]}>
                             <TextInput
@@ -69,7 +69,7 @@ const Signup = ({ navigation }) => {
                                 placeholder="Enter Password"
                             />
                         </View>
-                    </View>
+                    </View> */}
 
                     <View style={{ flexDirection: 'row', marginTop: 15 }}>
                         <Text style={styles.byCreatingTextStyle}>By creating an account, You agree to the Bollywoo
@@ -87,7 +87,7 @@ const Signup = ({ navigation }) => {
                 </View>
 
                 <View>
-                    <TouchableOpacity style={styles.nextButtonStyle}>
+                    <TouchableOpacity style={styles.nextButtonStyle}onPress={()=>{navigation.navigate("InterestSelection")}}>
                         <Text style={styles.nextButtonTextStyle}>{R.strings.next}</Text>
                     </TouchableOpacity>
                 </View>
