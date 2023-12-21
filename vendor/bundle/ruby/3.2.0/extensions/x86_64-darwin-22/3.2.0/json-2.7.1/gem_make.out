@@ -1,0 +1,16 @@
+current directory: /Users/mac/BollywooUserApp/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+/usr/local/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/mac/BollywooUserApp/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20231212-13241-5uoyr1 sitelibdir\=./.gem.20231212-13241-5uoyr1 clean
+
+current directory: /Users/mac/BollywooUserApp/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20231212-13241-5uoyr1 sitelibdir\=./.gem.20231212-13241-5uoyr1
+make: Nothing to be done for `all'.
+
+current directory: /Users/mac/BollywooUserApp/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20231212-13241-5uoyr1 sitelibdir\=./.gem.20231212-13241-5uoyr1 install
+
+current directory: /Users/mac/BollywooUserApp/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20231212-13241-5uoyr1 sitelibdir\=./.gem.20231212-13241-5uoyr1 clean
